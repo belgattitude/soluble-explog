@@ -24,6 +24,7 @@ Early-days experiment based off this [issue](https://github.com/zendframework/ze
 - [x] Auto-registration of a delegator on the stratigility ErrorHandler. Supported by all DI.
 - [ ] Log listener compose a service with a discrete name that should resolve to a PSR-3 logger (this will allow having multiple loggers in your system)
 - [ ] It should use Psr\Log\NullLogger by default.
+- [ ] Configuration: exclude 404,...
 
 Later on,
 
