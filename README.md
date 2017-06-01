@@ -1,4 +1,4 @@
-# soluble-explogg
+# soluble-explog
 
 [![PHP Version](http://img.shields.io/badge/php-7.1+-ff69b4.svg)](https://packagist.org/packages/soluble/explog)
 [![Build Status](https://travis-ci.org/belgattitude/soluble-explog.svg?branch=master)](https://travis-ci.org/belgattitude/soluble-explog)
@@ -28,10 +28,15 @@ Early-days experiment based off this [issue](https://github.com/zendframework/ze
 
 Later on,
 
-- [ ] Unit tests, coverag 100%
+- [ ] Unit tests, coverage 100%
 - [ ] Documentation
 
 ## Documentation
 
+### Install
+
+```shell
+$ composer require soluble-explog
+```
   
 
