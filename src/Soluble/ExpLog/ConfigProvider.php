@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Soluble\ExpressiveLogger;
+namespace Soluble\ExpLog;
 
 class ConfigProvider
 {
-    public const LOGGER = '\Soluble\ExpressiveLogger\ErrorHandlerLogger';
+    public const LOGGER = '\Soluble\ExpLog\ErrorHandlerLogger';
 
     public function __invoke(): array
     {
@@ -22,7 +22,7 @@ class ConfigProvider
             ],
             'delegators' => [
                 \Zend\Stratigility\Middleware\ErrorHandler::class => [
-                    \Soluble\ExpressiveLogger\Listener\LoggingErrorListenerDelegatorFactory::class,
+                    \Soluble\ExpLog\Listener\LoggingErrorListenerDelegatorFactory::class,
                 ]
             ]
         ];

@@ -1,5 +1,5 @@
 {
-  "name": "soluble/expressive-logger",
+  "name": "soluble/explog",
   "description": "Expressive logger component",
   "license": "MIT",
   "keywords": [
@@ -17,14 +17,14 @@
   ],
   "autoload": {
     "psr-4": {
-      "Soluble\\ExpressiveLogger\\": "src/Soluble/ExpressiveLogger"
+      "Soluble\\ExpLog\\": "src/Soluble/ExpLog"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ExpressiveLoggerTest\\": "tests/ExpressiveLoggerTest",
-      "ExpressiveLoggerSmokeTest\\": "tests/ExpressiveLoggerSmokeTest",
-      "ExpressiveLoggerApp\\": "tests/expressive/src/ExpressiveLoggerApp"
+      "ExpLogTest\\": "tests/ExpLogTest",
+      "ExpLogSmokeTest\\": "tests/ExpLogSmokeTest",
+      "ExpLogApp\\": "tests/expressive/src/ExpLogApp"
     }
   },
   "require": {
@@ -56,8 +56,8 @@
       "dev-master": "1.0-dev"
     },
     "zf": {
-      "component": "Soluble\\ExpressiveLogger",
-      "config-provider": "Soluble\\ExpressiveLogger\\Config\\ConfigProvider"
+      "component": "Soluble\\ExpLog",
+      "config-provider": "Soluble\\ExpLog\\Config\\ConfigProvider"
     }
   },
   "scripts": {

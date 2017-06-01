@@ -1,12 +1,12 @@
-# soluble-expressive-logger  
+# soluble-explog
 
-[![PHP Version](http://img.shields.io/badge/php-7.1+-ff69b4.svg)](https://packagist.org/packages/soluble/expressive-logger)
-[![Build Status](https://travis-ci.org/belgattitude/soluble-expressive-logger.svg?branch=master)](https://travis-ci.org/belgattitude/soluble-expressive-logger)
-[![codecov](https://codecov.io/gh/belgattitude/soluble-expressive-logger/branch/master/graph/badge.svg)](https://codecov.io/gh/belgattitude/soluble-expressive-logger)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/belgattitude/soluble-expressive-logger/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/belgattitude/soluble-expressive-logger/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/soluble/expressive-logger/v/stable.svg)](https://packagist.org/packages/soluble/expressive-logger)
-[![Total Downloads](https://poser.pugx.org/soluble/expressive-logger/downloads.png)](https://packagist.org/packages/soluble/expressive-logger)
-[![License](https://poser.pugx.org/soluble/expressive-logger/license.png)](https://packagist.org/packages/soluble/expressive-logger)
+[![PHP Version](http://img.shields.io/badge/php-7.1+-ff69b4.svg)](https://packagist.org/packages/soluble/explog)
+[![Build Status](https://travis-ci.org/belgattitude/soluble-explog.svg?branch=master)](https://travis-ci.org/belgattitude/soluble-explog)
+[![codecov](https://codecov.io/gh/belgattitude/soluble-explog/branch/master/graph/badge.svg)](https://codecov.io/gh/belgattitude/soluble-explog)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/belgattitude/soluble-explog/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/belgattitude/soluble-explog/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/soluble/explog/v/stable.svg)](https://packagist.org/packages/soluble/explog)
+[![Total Downloads](https://poser.pugx.org/soluble/explog/downloads.png)](https://packagist.org/packages/soluble/explog)
+[![License](https://poser.pugx.org/soluble/explog/license.png)](https://packagist.org/packages/soluble/explog)
 
 
 **Experimental** zend-expressive 2.0 out-of-the-box and *(still or forever)* opinionated logger with monolog.  

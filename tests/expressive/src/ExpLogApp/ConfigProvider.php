@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ExpressiveLoggerApp;
+namespace ExpLogApp;
 
 class ConfigProvider
 {

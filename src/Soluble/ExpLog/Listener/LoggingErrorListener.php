@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Soluble\ExpressiveLogger\Listener;
+namespace Soluble\ExpLog\Listener;
 
 use Psr\Log\LoggerInterface;
 use Psr\Http\Message\ResponseInterface;

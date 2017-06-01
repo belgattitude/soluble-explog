@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Soluble\ExpressiveLogger\Listener;
+namespace Soluble\ExpLog\Listener;
 
 use Psr\Container\ContainerInterface;
 use Zend\Stratigility\Middleware\ErrorHandler;
@@ -15,7 +15,7 @@ class LoggingErrorListenerDelegatorFactory
             return null;
         }
 
-        $listener = new LoggingErrorListener($container->get('Soluble\ExpressiveLogger\ErrorHandlerLogger'));
+        $listener = new LoggingErrorListener($container->get('Soluble\ExpLog\ErrorHandlerLogger'));
         $errorHandler = $callback();
         $errorHandler->attachListener($listener);
 

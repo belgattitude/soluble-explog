@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use ExpressiveLoggerApp\Action\ExceptionAction;
+use ExpLogApp\Action\ExceptionAction;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Zend\Diactoros\Response\JsonResponse;

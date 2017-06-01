@@ -10,11 +10,11 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="expressive-logger-unit">
-            <directory>tests/ExpressiveLoggerTest</directory>
+        <testsuite name="explog-unit-test">
+            <directory>tests/ExpLogTest</directory>
         </testsuite>
-        <testsuite name="expressive-logger-smoke-tests">
-            <directory>tests/ExpressiveLoggerSmokeTest</directory>
+        <testsuite name="explog-smoke-tests">
+            <directory>tests/ExpLogSmokeTest</directory>
         </testsuite>
     </testsuites>
     <php>

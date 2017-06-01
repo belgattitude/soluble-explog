@@ -14,9 +14,9 @@ $aggregator = new ConfigAggregator([
     // Include cache configuration
     new ArrayProvider($cacheConfig),
 
-    Soluble\ExpressiveLogger\ConfigProvider::class,
+    Soluble\ExpLog\ConfigProvider::class,
 
-    ExpressiveLoggerApp\ConfigProvider::class,
+    ExpLogApp\ConfigProvider::class,
 
     // Load application config in a pre-defined order in such a way that local settings
     // overwrite global settings. (Loaded as first to last):

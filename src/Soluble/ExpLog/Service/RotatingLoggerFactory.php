@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Soluble\ExpressiveLogger\Service;
+namespace Soluble\ExpLog\Service;
 
 use Monolog\Handler;
 use Monolog\Logger;
@@ -19,11 +19,11 @@ class RotatingLoggerFactory
     {
         // @todo create variable in config
         //$config = $container->get('config');
-        $log_file = 'data/log/expressive-logger.log';
+        $log_file = 'data/log/explog.log';
         $days = 10;
         $level = Logger::INFO;
 
-        $logger = new Logger('expressive-logger');
+        $logger = new Logger('soluble-explog');
         $logger->pushProcessor(new PsrLogMessageProcessor());
         $logger->pushHandler(
             new Handler\RotatingFileHandler($log_file, $days, $level)

@@ -1,0 +1,12 @@
+<?php
+/**
+ * @todo prepare configuration
+ */
+
+return [
+    'dependencies' => [
+        'factories' => [
+            'Soluble\ExpLog\ErrorHandlerLogger' => \Soluble\ExpLog\Service\RotatingLoggerFactory::class
+        ]
+    ]
+];

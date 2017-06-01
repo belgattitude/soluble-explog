@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ExpressiveLoggerApp\Action;
+namespace ExpLogApp\Action;
 
 use Interop\Container\ContainerInterface;
 

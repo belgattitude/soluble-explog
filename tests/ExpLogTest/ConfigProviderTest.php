@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ExpressiveLoggerTest;
+namespace ExpLogTest;
 
 use PHPUnit\Framework\TestCase;
-use Soluble\ExpressiveLogger\ConfigProvider;
+use Soluble\ExpLog\ConfigProvider;
 
 class ConfigProviderTest extends TestCase
 {
