@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Soluble\ExpLog\Service;
+namespace Soluble\ExpLog\Logger;
 
 use Monolog\Handler;
 use Monolog\Logger;

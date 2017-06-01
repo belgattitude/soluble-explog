@@ -6,7 +6,7 @@
 return [
     'dependencies' => [
         'factories' => [
-            'Soluble\ExpLog\ErrorHandlerLogger' => \Soluble\ExpLog\Service\RotatingLoggerFactory::class
+            'Soluble\ExpLog\ErrorHandlerLogger' => \Soluble\ExpLog\Logger\RotatingLoggerFactory::class
         ]
     ]
 ];
