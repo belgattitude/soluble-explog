@@ -1,4 +1,4 @@
-# soluble-explog
+# soluble-explogg
 
 [![PHP Version](http://img.shields.io/badge/php-7.1+-ff69b4.svg)](https://packagist.org/packages/soluble/explog)
 [![Build Status](https://travis-ci.org/belgattitude/soluble-explog.svg?branch=master)](https://travis-ci.org/belgattitude/soluble-explog)
