@@ -4,15 +4,16 @@ declare(strict_types=1);
 
 namespace ExpLogTest\ErrorHandler;
 
-use ExpLogTest\TestAsset\DummyErrorHandler;
+use Interop\Http\ServerMiddleware\DelegateInterface;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Psr\Container\ContainerInterface;
-use Psr\Log\NullLogger;
 use Soluble\ExpLog\ErrorHandler\ErrorHandlerLogger;
 use Soluble\ExpLog\ErrorHandler\LoggingErrorListenerDelegatorFactory;
 use Zend\Diactoros\Response\TextResponse;
+use Zend\Diactoros\ServerRequest;
 use Zend\Stratigility\Middleware\ErrorHandler;
+use Monolog\Logger;
 
 class LoggingErrorListenerDelegatorFactoryTest extends TestCase
 {
@@ -26,16 +27,17 @@ class LoggingErrorListenerDelegatorFactoryTest extends TestCase
 
     public function testListenerShouldBeAttached()
     {
+        $testHandler = new \Monolog\Handler\TestHandler();
+        $testLogger = new Logger('foo', [$testHandler]);
+
         $this->container
             ->has(ErrorHandlerLogger::class)->willReturn(true);
         $this->container
             ->get(ErrorHandlerLogger::class)->willReturn(
-                new NullLogger()
+                $testLogger
             );
 
         $errorHandler = new ErrorHandler(new TextResponse('Cool'));
-        //$errorHandler = $this->prophesize(DummyErrorHandler::class);
-        //$errorHandler->attachListener(Argument::any())->shouldBeCalled();
 
         $logFactory = new LoggingErrorListenerDelegatorFactory();
 
@@ -45,6 +47,17 @@ class LoggingErrorListenerDelegatorFactoryTest extends TestCase
 
         $this->assertInstanceOf(ErrorHandler::class, $logListener);
 
-        //$logListener->process()
+        /* @var DelegateInterface|\Prophecy\Prophecy\ObjectProphecy $delegate */
+        $delegate = $this->prophesize(DelegateInterface::class);
+        $delegate
+            ->process(Argument::any())
+            ->willThrow(new \Exception('Dummy exception', 500));
+
+        $this->assertEmpty($testHandler->getRecords());
+        $response = $errorHandler->process(new ServerRequest(), $delegate->reveal());
+        $this->assertEquals(500, $response->getStatusCode());
+
+        $this->assertNotEmpty($testHandler->getRecords());
+        $this->assertTrue($testHandler->hasRecordThatMatches('/Dummy exception/', Logger::ERROR));
     }
 }
