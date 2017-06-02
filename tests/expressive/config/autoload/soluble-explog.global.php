@@ -7,8 +7,7 @@ use Monolog\Processor\PsrLogMessageProcessor;
 return [
     'dependencies' => [
         'factories' => [
-            //'Soluble\ExpLog\ErrorHandlerLogger' => \Soluble\ExpLog\Service\RotatingLoggerFactory::class
-            'Soluble\ExpLog\ErrorHandlerLogger' => function (\Psr\Container\ContainerInterface $container) {
+            \Soluble\ExpLog\ErrorHandler\ErrorHandlerLogger::class => function (\Psr\Container\ContainerInterface $container) {
                 $log_file = 'data/log/test-logger.log';
                 $logger = new Logger('explog-test-logger');
                 $logger->pushProcessor(new PsrLogMessageProcessor());

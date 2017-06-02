@@ -4,9 +4,6 @@
  */
 
 return [
-    'dependencies' => [
-        'factories' => [
-            'Soluble\ExpLog\ErrorHandlerLogger' => \Soluble\ExpLog\Logger\RotatingLoggerFactory::class
-        ]
+    'soluble-explog' => [
     ]
 ];

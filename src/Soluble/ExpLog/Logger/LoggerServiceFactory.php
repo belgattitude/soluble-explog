@@ -10,7 +10,7 @@ use Monolog\Processor\PsrLogMessageProcessor;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
 
-class RotatingLoggerFactory
+class LoggerServiceFactory
 {
     /**
      * @throws \Exception

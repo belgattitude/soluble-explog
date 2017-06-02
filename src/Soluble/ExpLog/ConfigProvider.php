@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace Soluble\ExpLog;
 
+use Soluble\ExpLog\ErrorHandler\ErrorHandlerLogger;
+use Soluble\ExpLog\ErrorHandler\LoggingErrorListenerDelegatorFactory;
+use Soluble\ExpLog\Logger\LoggerServiceFactory;
+
 class ConfigProvider
 {
-    public const LOGGER = '\Soluble\ExpLog\ErrorHandlerLogger';
-
     public function __invoke(): array
     {
         return [
@@ -19,10 +21,11 @@ class ConfigProvider
     {
         return [
             'factories' => [
+                ErrorHandlerLogger::class => LoggerServiceFactory::class
             ],
             'delegators' => [
                 \Zend\Stratigility\Middleware\ErrorHandler::class => [
-                    \Soluble\ExpLog\Listener\LoggingErrorListenerDelegatorFactory::class,
+                    LoggingErrorListenerDelegatorFactory::class
                 ]
             ]
         ];
