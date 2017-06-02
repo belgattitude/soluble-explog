@@ -41,11 +41,9 @@ class LoggingErrorListenerDelegatorFactoryTest extends TestCase
 
         $logFactory = new LoggingErrorListenerDelegatorFactory();
 
-        $logListener = $logFactory($this->container->reveal(), 'test', function () use ($errorHandler) {
+        $logFactory($this->container->reveal(), 'test', function () use ($errorHandler) {
             return $errorHandler;
         });
-
-        $this->assertInstanceOf(ErrorHandler::class, $logListener);
 
         /* @var DelegateInterface|\Prophecy\Prophecy\ObjectProphecy $delegate */
         $delegate = $this->prophesize(DelegateInterface::class);
